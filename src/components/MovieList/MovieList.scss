@@ -128,20 +128,22 @@
 }
 
 .pages__wrapper {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   right: 50px;
   left: 50%;
   transform: translateX(-50%);
   gap: 10px;
+  background-color: rgba(20, 26, 51, 0.9);
   button {
     background-color: transparent;
     border: none;
     outline: none;
-    padding: 10px;
+    padding: 2px;
     font-size: 2em;
     color: #63adf3;
     cursor: pointer;
