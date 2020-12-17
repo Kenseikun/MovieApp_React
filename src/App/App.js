@@ -16,6 +16,7 @@ class App extends Component {
     moviesAfterSearch: [],
     isActiveBtn: true,
     pageNumber: 1,
+    sortedBtnActive: false,
   };
 
   // apiUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=b58541d0d1fdb2d8ee6fe348f0588057&language=en-US&page=${this.state.pageNumber}`;
@@ -140,6 +141,7 @@ class App extends Component {
 
     this.setState({
       moviesAfterSearch: [...newMovies],
+      sortedBtnActive: true,
     });
   };
 
@@ -165,6 +167,7 @@ class App extends Component {
                   handleNextPageBtn={this.handleNextPageBtn}
                   handlePrevPageBtn={this.handlePrevPageBtn}
                   handleSortBtn={this.handleSortBtn}
+                  sortedBtnActive={this.sortedBtnActive}
                 />
               </Route>
               <Route path={routes.watchList}>

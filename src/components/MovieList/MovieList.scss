@@ -28,6 +28,13 @@
     height: 50px;
     background-color: #1d2747;
   }
+  .rating__btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #6384a8;
+  }
 
   .movies__wrapper {
     display: flex;

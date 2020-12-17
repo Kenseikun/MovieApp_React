@@ -10,17 +10,23 @@ const MovieList = ({
   handleNextPageBtn,
   handlePrevPageBtn,
   handleSortBtn,
+  sortedBtnActive,
 }) => {
   return (
     <>
       <div className="top__rated--wrapper">
         <p className="page__title">Top rated</p>
 
-        <button onClick={handleSortBtn}>Smallest rate</button>
         {moviesAfterSearch.length === 0 ? (
-          <p style={{ color: "white" }}>Brak filmow</p>
+          <>
+            <p style={{ color: "white" }}>No movies...</p>
+          </>
         ) : (
           <>
+            <button onClick={handleSortBtn} className="rating__btn">
+              {sortedBtnActive ? "Lower rating sort" : "Top rated"}
+            </button>
+
             <ul className="movies__wrapper">
               {moviesAfterSearch.map((movie) => {
                 const {
