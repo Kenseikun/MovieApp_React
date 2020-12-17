@@ -1,0 +1,119 @@
+.watch__list--wrapper {
+  width: 100%;
+
+  height: 100vh;
+  overflow: hidden;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(95, 87, 136);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #455eb3;
+    border-radius: 10px;
+  }
+  .page__title {
+    color: #fff;
+    font-weight: 100;
+    font-size: 2.5em;
+    margin: 10px auto;
+    padding: 0px 10px;
+    width: 100%;
+    height: 50px;
+    background-color: #1d2747;
+  }
+  .movies__watch--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 100vh;
+    padding-bottom: 100px;
+
+    .movie__list {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      height: 400px;
+
+      background-color: #1d2747;
+      color: #4c6085;
+      list-style: none;
+      margin: 25px 20px;
+      padding: 5px 15px;
+      width: 20%;
+
+      box-shadow: 0px 0px 10px 2px#080c1b;
+
+      .movie__cover {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        height: 70%;
+      }
+
+      .movie__title {
+        color: #b8bccc;
+        font-size: 0.8em;
+        font-weight: 100;
+        margin: 5px auto;
+        font-weight: 500;
+      }
+
+      .movie__rating {
+        font-size: 0.8em;
+        i {
+          font-size: 1.4em;
+          color: tomato;
+        }
+      }
+
+      button,
+      .link__viewmovie {
+        width: 80%;
+        padding: 10px 0px;
+        cursor: pointer;
+        background-color: #f0b022;
+        border: none;
+        outline: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 0.7em;
+        transition: 0.3s;
+        text-decoration: none;
+        margin: 5px auto;
+
+        &:hover {
+          background-color: #3f3622;
+        }
+      }
+
+      button {
+        margin-bottom: 30px;
+      }
+      .link__viewmovie {
+        color: #fff;
+        background-color: #3190ea;
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translate(-50%);
+        box-shadow: 0px 10px 10px 0px #000000;
+
+        &:hover {
+          background-color: #62adf3;
+          color: black;
+        }
+      }
+    }
+  }
+}
