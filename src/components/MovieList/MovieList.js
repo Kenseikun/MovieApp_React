@@ -42,7 +42,7 @@ const MovieList = ({
                   <li className="movie__list" key={id}>
                     <img
                       className="movie__cover"
-                      src={`http://image.tmdb.org/t/p/w185/${poster_path}`}
+                      src={`http://image.tmdb.org/t/p/w500/${poster_path}`}
                       alt="movie cover"
                     />
                     <p className="movie__title">{title}</p>
@@ -74,14 +74,18 @@ const MovieList = ({
               })}
             </ul>
 
-            <button
-              onClick={handlePrevPageBtn}
-              disabled={pageNumber === 1 ? true : false}
-            >
-              go back
-            </button>
-            <h4 style={{ color: "white" }}>Page number: {pageNumber}</h4>
-            <button onClick={handleNextPageBtn}>go next</button>
+            <div className="pages__wrapper">
+              <button
+                onClick={handlePrevPageBtn}
+                disabled={pageNumber === 1 ? true : false}
+              >
+                <i className="fas fa-arrow-alt-circle-left"></i>
+              </button>
+              <h4 style={{ color: "white" }}>Page number: {pageNumber}</h4>
+              <button onClick={handleNextPageBtn}>
+                <i className="fas fa-arrow-alt-circle-right"></i>
+              </button>
+            </div>
           </>
         )}
       </div>
