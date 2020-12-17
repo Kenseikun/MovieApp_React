@@ -4,7 +4,7 @@ import { routes } from "../../routes";
 import "./NavBar.scss";
 
 const activeNavLinkStyles = {
-  color: "yellow",
+  backgroundColor: "#475a96",
 };
 
 const NavBar = ({

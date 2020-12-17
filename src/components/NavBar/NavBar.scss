@@ -81,3 +81,21 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .nav__wrapper {
+    ul {
+      width: 100px;
+      li {
+        .text__link {
+          font-size: 10px;
+          width: 100%;
+          height: 30px;
+        }
+      }
+    }
+    input {
+      padding: 5px;
+    }
+  }
+}

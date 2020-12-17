@@ -28,10 +28,11 @@
     height: 50px;
     background-color: #1d2747;
   }
+
   .movies__wrapper {
     display: flex;
     flex-wrap: wrap;
-    overflow: auto;
+    // overflow: auto;
     // height: 100vh;
     // padding-bottom: 100px;
 
@@ -49,8 +50,7 @@
       list-style: none;
       margin: 25px 20px;
       padding: 5px 15px;
-      width: 20%;
-
+      min-width: 200px;
       box-shadow: 0px 0px 10px 2px#080c1b;
 
       .movie__cover {
@@ -116,6 +116,21 @@
           color: black;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .top__rated--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .movies__wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
