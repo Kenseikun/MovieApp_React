@@ -12,6 +12,7 @@ const MovieList = ({
   handleSortBtn,
   sortedBtnActive,
 }) => {
+  console.log(sortedBtnActive);
   return (
     <>
       <div className="top__rated--wrapper">

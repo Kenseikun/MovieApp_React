@@ -16,7 +16,7 @@ class App extends Component {
     moviesAfterSearch: [],
     isActiveBtn: true,
     pageNumber: 1,
-    sortedBtnActive: false,
+    sortedBtnActive: true,
   };
 
   // apiUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=b58541d0d1fdb2d8ee6fe348f0588057&language=en-US&page=${this.state.pageNumber}`;
@@ -139,10 +139,10 @@ class App extends Component {
     const newMovies = [...this.state.moviesAfterSearch];
     newMovies.reverse();
 
-    this.setState({
+    this.setState((prevState) => ({
       moviesAfterSearch: [...newMovies],
-      sortedBtnActive: true,
-    });
+      sortedBtnActive: !prevState,
+    }));
   };
 
   //TODO: .env

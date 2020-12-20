@@ -10,7 +10,6 @@ const SingleMovie = (props) => {
     overview,
     vote_average,
     original_language,
-    popularity,
   } = props.location.state;
 
   const { handleAddToWatch } = props;
@@ -24,7 +23,7 @@ const SingleMovie = (props) => {
         <p className="movie__title">{title}</p>
         <p className="movie__overwiew">{overview}</p>
         <p className="movie__rate">{vote_average} / 10</p>
-        <p>{original_language}</p>
+        <p className="movie__language">{original_language}</p>
         <button onClick={() => handleAddToWatch(id)}>Add to watch list</button>
       </div>
     </div>
