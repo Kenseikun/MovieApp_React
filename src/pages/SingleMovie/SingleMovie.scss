@@ -57,3 +57,12 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .movie__wrapper {
+    .movie__card--wrapper {
+      width: 94%;
+      padding: 5px;
+    }
+  }
+}

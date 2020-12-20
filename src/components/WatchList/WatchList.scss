@@ -117,3 +117,18 @@
     }
   }
 }
+
+@media (max-width: 360px) {
+  .watch__list--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .movies__watch--wrapper {
+      .movie__list {
+        width: 200px;
+      }
+    }
+  }
+}
