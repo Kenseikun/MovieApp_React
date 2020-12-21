@@ -136,12 +136,25 @@ class App extends Component {
   handleSortBtn = () => {
     //Dla Cwiczen
     // const sortedMovies = this.state.moviesAfterSearch.sort(a,b)
-    const newMovies = [...this.state.moviesAfterSearch];
-    newMovies.reverse();
+    const sortedMovies = this.state.moviesAfterSearch.sort((a, b) => {
+      if (this.state.sortedBtnActive === true) {
+        return a.vote_average - b.vote_average;
+      } else {
+        return a.vote_average + b.vote_average;
+      }
+    });
+
+    console.log(sortedMovies);
+
+    // const newMovies = [...this.state.moviesAfterSearch];
+    // newMovies.reverse();
 
     this.setState((prevState) => ({
-      moviesAfterSearch: [...newMovies],
-      sortedBtnActive: !prevState,
+      // moviesAfterSearch: [...newMovies],
+      moviesAfterSearch: [...sortedMovies],
+      // sortedBtnActive: !prevState,
+      // sortedBtnActive: !this.state.sortedBtnActive,
+      sortedBtnActive: !this.state.prevState,
     }));
   };
 
