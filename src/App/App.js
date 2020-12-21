@@ -38,7 +38,7 @@ class App extends Component {
   getMovies = () => {
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/top_rated?api_key=b58541d0d1fdb2d8ee6fe348f0588057&language=en-US&page=${this.state.pageNumber}`
+        `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=${this.state.pageNumber}`
       )
       .then((response) => {
         console.log(response);
@@ -140,7 +140,7 @@ class App extends Component {
       if (this.state.sortedBtnActive === true) {
         return a.vote_average - b.vote_average;
       } else {
-        return a.vote_average + b.vote_average;
+        return b.vote_average - a.vote_average;
       }
     });
 
@@ -152,9 +152,9 @@ class App extends Component {
     this.setState((prevState) => ({
       // moviesAfterSearch: [...newMovies],
       moviesAfterSearch: [...sortedMovies],
-      // sortedBtnActive: !prevState,
+      sortedBtnActive: !prevState.sortedBtnActive,
       // sortedBtnActive: !this.state.sortedBtnActive,
-      sortedBtnActive: !this.state.prevState,
+      // sortedBtnActive: !this.state.prevState,
     }));
   };
 
@@ -180,7 +180,7 @@ class App extends Component {
                   handleNextPageBtn={this.handleNextPageBtn}
                   handlePrevPageBtn={this.handlePrevPageBtn}
                   handleSortBtn={this.handleSortBtn}
-                  sortedBtnActive={this.sortedBtnActive}
+                  sortedBtnActive={this.state.sortedBtnActive}
                 />
               </Route>
               <Route path={routes.watchList}>

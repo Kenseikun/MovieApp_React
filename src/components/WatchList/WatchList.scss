@@ -1,7 +1,7 @@
 .watch__list--wrapper {
   width: 100%;
 
-  height: 100vh;
+  // height: 100vh;
   overflow: hidden;
 
   ::-webkit-scrollbar {
@@ -126,6 +126,7 @@
     justify-content: center;
     text-align: center;
     .movies__watch--wrapper {
+      border: 1px solid red;
       .movie__list {
         width: 200px;
       }
